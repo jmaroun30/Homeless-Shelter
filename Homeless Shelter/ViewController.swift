@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var bottomButton: UIButton!
     
+    var hardUser = "johnny"
+    var hardPass = "maroun"
     
     var signUpMode = false
     
@@ -30,6 +32,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func topTapped(_ sender: Any) {
+        if (signUpMode == false && (userTextField.text == "" || passwordTextField.text == "")) {
+            displayAlert(title: "Missing Information", message: "You must provide a valid email and password.")
+        } else if (signUpMode && (userTextField.text == "" || passwordTextField.text == "" || nameTextField.text == "" || emailTextField.text == "")) {
+            displayAlert(title: "Missing Information", message: "You must provide your name, a username, email, and password.")
+        }
+    }
+    
+    func displayAlert(title:String, message:String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func bottomTapped(_ sender: Any) {
