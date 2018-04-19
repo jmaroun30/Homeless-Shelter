@@ -108,11 +108,107 @@
                         <outlet property="topButton" destination="9aA-dR-oam" id="Hbb-dM-Jl5"/>
                         <outlet property="userLabel" destination="dEa-IK-3pE" id="eVl-BG-Md7"/>
                         <outlet property="userTextField" destination="EAS-aR-VdJ" id="WXb-Uy-HbI"/>
+                        <segue destination="yYR-BI-RNI" kind="presentation" identifier="userSegue" id="cG9-mP-PTg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="36.945812807881772"/>
+            <point key="canvasLocation" x="-156" y="33"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="h8S-eJ-kkR">
+            <objects>
+                <viewController id="7bL-my-wlT" customClass="UserViewController" customModule="Homeless_Shelter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i7E-C2-EVk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Reservation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdg-23-W3T">
+                                <rect key="frame" x="31" y="520" width="313" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F6l-B7-nYN">
+                                <rect key="frame" x="16" y="114" width="343" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gj9-ju-Ekw">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="343"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="car-He-kax">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="343"/>
+                                                <subviews>
+                                                    <mapView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IEg-z4-rjW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="343"/>
+                                                    </mapView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WAA-fQ-y7X">
+                                <rect key="frame" x="140" y="490" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zmU-py-fEI">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jYF-zd-f52">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBb-B5-xQD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                                        <state key="normal" title="Find a Shelter"/>
+                                                        <connections>
+                                                            <action selector="findShelterTapped:" destination="7bL-my-wlT" eventType="touchUpInside" id="84g-Jl-4u0"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Tvg-p1-AzW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xxc-Wy-QyU">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Bna-nl-ZLT">
+                            <connections>
+                                <action selector="logoutTapped:" destination="7bL-my-wlT" id="k5F-Rn-Laq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="findShelterButton" destination="NBb-B5-xQD" id="Eyi-sq-M5i"/>
+                        <outlet property="map" destination="IEg-z4-rjW" id="Fln-Rq-073"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WF5-9X-3vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="33.990147783251231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cNg-my-VQS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yYR-BI-RNI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rau-7e-dwe">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7bL-my-wlT" kind="relationship" relationship="rootViewController" id="pjf-yz-nLa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReC-hz-LNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637.60000000000002" y="33.990147783251231"/>
         </scene>
     </scenes>
 </document>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A3CA58771C045E199EC3167 /* Pods_Homeless_Shelter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FE229A976896C8581741C6 /* Pods_Homeless_Shelter.framework */; };
 		B7453F7A20882A900060B59F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7453F7920882A900060B59F /* GoogleService-Info.plist */; };
+		B7453F7C20883F370060B59F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7453F7B20883F370060B59F /* UserViewController.swift */; };
 		B777BDFD2087B63A0012A943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777BDFC2087B63A0012A943 /* AppDelegate.swift */; };
 		B777BDFF2087B63A0012A943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777BDFE2087B63A0012A943 /* ViewController.swift */; };
 		B777BE022087B63A0012A943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B777BE002087B63A0012A943 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		56FE229A976896C8581741C6 /* Pods_Homeless_Shelter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homeless_Shelter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7453F7920882A900060B59F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7453F7B20883F370060B59F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B777BDF92087B63A0012A943 /* Homeless Shelter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homeless Shelter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B777BDFC2087B63A0012A943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B777BDFE2087B63A0012A943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				B777BDFC2087B63A0012A943 /* AppDelegate.swift */,
 				B777BDFE2087B63A0012A943 /* ViewController.swift */,
+				B7453F7B20883F370060B59F /* UserViewController.swift */,
 				B777BE002087B63A0012A943 /* Main.storyboard */,
 				B777BE032087B63B0012A943 /* Assets.xcassets */,
 				B777BE052087B63B0012A943 /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B777BDFF2087B63A0012A943 /* ViewController.swift in Sources */,
+				B7453F7C20883F370060B59F /* UserViewController.swift in Sources */,
 				B777BDFD2087B63A0012A943 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
