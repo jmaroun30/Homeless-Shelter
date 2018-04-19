@@ -32,10 +32,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func topTapped(_ sender: Any) {
-        if (signUpMode == false && (userTextField.text == "" || passwordTextField.text == "")) {
-            displayAlert(title: "Missing Information", message: "You must provide a valid email and password.")
-        } else if (signUpMode && (userTextField.text == "" || passwordTextField.text == "" || nameTextField.text == "" || emailTextField.text == "")) {
-            displayAlert(title: "Missing Information", message: "You must provide your name, a username, email, and password.")
+        if let email = emailTextField.text {
+            if let password = passwordTextField.text {
+                if signUpMode == false {
+                    FIRAuth.auth()?.signIn(withEmail: email, password: password,
+                                           completion: { (user, error) in
+                                            if error != nil {
+                                                self.displayAlert(title: "Error", message: error!.localizedDescription)
+                                            } else {
+                                                print("Log In Success")
+                                            }
+                    })
+                } else {
+                    if let name = nameTextField.text {
+                        if let user = userTextField.text {
+                            if emailTextField.text == "" || passwordTextField.text == "" || userTextField.text == "" || nameTextField.text == "" {
+                                displayAlert(title: "Missing Information", message: "You must provide an email, password, name, and username.")
+                                
+                            } else {
+                                FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                                    if error != nil {
+                                        self.displayAlert(title: "Error", message: error!.localizedDescription)
+                                    } else {
+                                        print("Sign Up Success")
+                                    }
+                                })
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -52,8 +78,9 @@ class ViewController: UIViewController {
             adminLabel.isHidden = true
             userLabel.isHidden = true
             nameTextField.isHidden = true
-            emailTextField.isHidden = true
+            emailTextField.isHidden = false
             riderDriverSwitch.isHidden = true
+            userTextField.isHidden = true
             signUpMode = false
         } else {
             topButton.setTitle("Register", for: .normal)
@@ -63,6 +90,7 @@ class ViewController: UIViewController {
             nameTextField.isHidden = false
             emailTextField.isHidden = false
             riderDriverSwitch.isHidden = false
+            userTextField.isHidden = false
             signUpMode = true
         }
     }

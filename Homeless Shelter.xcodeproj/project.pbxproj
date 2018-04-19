@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5A3CA58771C045E199EC3167 /* Pods_Homeless_Shelter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FE229A976896C8581741C6 /* Pods_Homeless_Shelter.framework */; };
+		B7453F7A20882A900060B59F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7453F7920882A900060B59F /* GoogleService-Info.plist */; };
 		B777BDFD2087B63A0012A943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777BDFC2087B63A0012A943 /* AppDelegate.swift */; };
 		B777BDFF2087B63A0012A943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777BDFE2087B63A0012A943 /* ViewController.swift */; };
 		B777BE022087B63A0012A943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B777BE002087B63A0012A943 /* Main.storyboard */; };
 		B777BE042087B63B0012A943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B777BE032087B63B0012A943 /* Assets.xcassets */; };
 		B777BE072087B63B0012A943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B777BE052087B63B0012A943 /* LaunchScreen.storyboard */; };
-		B777BE0F2087B8370012A943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B777BE0E2087B8370012A943 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56FE229A976896C8581741C6 /* Pods_Homeless_Shelter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homeless_Shelter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7453F7920882A900060B59F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B777BDF92087B63A0012A943 /* Homeless Shelter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homeless Shelter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B777BDFC2087B63A0012A943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B777BDFE2087B63A0012A943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		B777BE032087B63B0012A943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B777BE062087B63B0012A943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B777BE082087B63B0012A943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B777BE0E2087B8370012A943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEF6D6F7209E2DC1193EBB81 /* Pods-Homeless Shelter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homeless Shelter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homeless Shelter/Pods-Homeless Shelter.release.xcconfig"; sourceTree = "<group>"; };
 		FF5DBA717F23E888A639C738 /* Pods-Homeless Shelter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homeless Shelter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homeless Shelter/Pods-Homeless Shelter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +86,7 @@
 				B777BE032087B63B0012A943 /* Assets.xcassets */,
 				B777BE052087B63B0012A943 /* LaunchScreen.storyboard */,
 				B777BE082087B63B0012A943 /* Info.plist */,
-				B777BE0E2087B8370012A943 /* GoogleService-Info.plist */,
+				B7453F7920882A900060B59F /* GoogleService-Info.plist */,
 			);
 			path = "Homeless Shelter";
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B777BE072087B63B0012A943 /* LaunchScreen.storyboard in Resources */,
-				B777BE0F2087B8370012A943 /* GoogleService-Info.plist in Resources */,
+				B7453F7A20882A900060B59F /* GoogleService-Info.plist in Resources */,
 				B777BE042087B63B0012A943 /* Assets.xcassets in Resources */,
 				B777BE022087B63A0012A943 /* Main.storyboard in Resources */,
 			);
