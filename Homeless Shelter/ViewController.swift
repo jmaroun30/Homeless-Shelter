@@ -21,9 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var bottomButton: UIButton!
     
-    var hardUser = "johnny"
-    var hardPass = "maroun"
-    
     var signUpMode = false
     
     override func viewDidLoad() {
@@ -47,7 +44,7 @@ class ViewController: UIViewController {
                 } else {
                     if let name = nameTextField.text {
                         if let user = userTextField.text {
-                            if emailTextField.text == "" || passwordTextField.text == "" || userTextField.text == "" || nameTextField.text == "" {
+                            if emailTextField.text == "" || passwordTextField.text == "" || user == "" || name == "" {
                                 displayAlert(title: "Missing Information", message: "You must provide an email, password, name, and username.")
                                 
                             } else {

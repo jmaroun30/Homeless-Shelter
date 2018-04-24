@@ -15,6 +15,8 @@
 		B777BE022087B63A0012A943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B777BE002087B63A0012A943 /* Main.storyboard */; };
 		B777BE042087B63B0012A943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B777BE032087B63B0012A943 /* Assets.xcassets */; };
 		B777BE072087B63B0012A943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B777BE052087B63B0012A943 /* LaunchScreen.storyboard */; };
+		B779FAAB208E52C8009741DD /* shelterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779FAAA208E52C8009741DD /* shelterListViewController.swift */; };
+		B779FAAD208E5D30009741DD /* shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779FAAC208E5D30009741DD /* shelter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B777BE032087B63B0012A943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B777BE062087B63B0012A943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B777BE082087B63B0012A943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B779FAAA208E52C8009741DD /* shelterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shelterListViewController.swift; sourceTree = "<group>"; };
+		B779FAAC208E5D30009741DD /* shelter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shelter.swift; sourceTree = "<group>"; };
 		DEF6D6F7209E2DC1193EBB81 /* Pods-Homeless Shelter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homeless Shelter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homeless Shelter/Pods-Homeless Shelter.release.xcconfig"; sourceTree = "<group>"; };
 		FF5DBA717F23E888A639C738 /* Pods-Homeless Shelter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homeless Shelter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homeless Shelter/Pods-Homeless Shelter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,8 @@
 				B777BDFE2087B63A0012A943 /* ViewController.swift */,
 				B7453F7B20883F370060B59F /* UserViewController.swift */,
 				B777BE002087B63A0012A943 /* Main.storyboard */,
+				B779FAAA208E52C8009741DD /* shelterListViewController.swift */,
+				B779FAAC208E5D30009741DD /* shelter.swift */,
 				B777BE032087B63B0012A943 /* Assets.xcassets */,
 				B777BE052087B63B0012A943 /* LaunchScreen.storyboard */,
 				B777BE082087B63B0012A943 /* Info.plist */,
@@ -209,8 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B779FAAB208E52C8009741DD /* shelterListViewController.swift in Sources */,
 				B777BDFF2087B63A0012A943 /* ViewController.swift in Sources */,
 				B7453F7C20883F370060B59F /* UserViewController.swift in Sources */,
+				B779FAAD208E5D30009741DD /* shelter.swift in Sources */,
 				B777BDFD2087B63A0012A943 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
