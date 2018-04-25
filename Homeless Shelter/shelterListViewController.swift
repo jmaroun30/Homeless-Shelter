@@ -19,12 +19,77 @@ class shelterListViewController: UIViewController, UITableViewDelegate, UITableV
     let cellId = "cellId"
     
     var filteredData = [shelter]()
+    var filteredByGender = [shelter]()
+    var filteredByAge = [shelter]()
+    var filteredByGenderAndAge = [shelter]()
     
     var isSearching = false
+    var isSearchingGender = false
+    var isSearchingAge = false
+    var genderSearching = false
+    var ageRangeSearching = false
     
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var genderSearchBar: UISearchBar!
+    @IBOutlet weak var ageSearchBar: UISearchBar!
     
     @IBOutlet weak var shelterListTableView: UITableView!
+    
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var ageRangeLabel: UILabel!
+    @IBOutlet weak var genderPickerView: UIPickerView!
+    @IBOutlet weak var ageRangePickerView: UILabel!
+    let genders = ["Any", "Male", "Female"]
+    let ageRange = ["Anyone", "Children", "Young Adults", "Families w/ Newborns", "Families"]
+
+ 
+    var address: String?
+    var capacity: Double?
+    var latitude: Double?
+    var longitude: Double?
+    var name: String?
+    var phone: String?
+    var restrictions: String?
+    var roomtype: String?
+    var special: String?
+    var shelterCount: String?
+
+
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let currentCell = tableView.cellForRow(at: indexPath)
+        let text = currentCell?.textLabel?.text
+        for s in shelterList {
+            if (s.name?.localizedCaseInsensitiveContains(text!))! {
+                address = s.address
+                capacity = s.capacity
+                latitude = s.latitude
+                longitude = s.longitude
+                name = s.name
+                phone = s.phone
+                restrictions = s.restrictions
+                roomtype = s.roomtype
+                special = s.special
+                shelterCount = s.shelterCount
+            }
+        }
+        self.performSegue(withIdentifier: "shelterDataSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "shelterDataSegue" {
+            let secondViewController = segue.destination as! shelterDataViewController
+            secondViewController.address = address
+            secondViewController.capacity = capacity
+            secondViewController.latitude = latitude
+            secondViewController.longitude = longitude
+            secondViewController.name = name
+            secondViewController.phone = phone
+            secondViewController.restrictions = restrictions
+            secondViewController.roomtype = roomtype
+            secondViewController.special = special
+            secondViewController.shelterCount = shelterCount
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isSearching {
@@ -35,7 +100,6 @@ class shelterListViewController: UIViewController, UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        
         if isSearching {
             cell.textLabel?.text = filteredData[indexPath.row].name
         } else {
@@ -43,6 +107,33 @@ class shelterListViewController: UIViewController, UITableViewDelegate, UITableV
         }
         return cell
     }
+    
+//    func genderSearchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        if genderSearchBar.text == nil || genderSearchBar.text == "" {
+//            isSearchingGender = false
+//            view.endEditing(true)
+//            shelterListTableView.reloadData()
+//        } else {
+//            isSearchingGender = true
+//            let text = genderSearchBar.text
+//            filteredData = shelterList.filter({($0.restrictions?.localizedStandardContains(text!))!})
+//            shelterListTableView.reloadData()
+//        }
+//    }
+//
+//    func ageSearchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        if ageSearchBar.text == nil || ageSearchBar.text == "" {
+//            isSearchingAge = false
+//            view.endEditing(true)
+//            shelterListTableView.reloadData()
+//        } else {
+//            isSearchingAge = true
+//            let text = ageSearchBar.text
+//            filteredData = shelterList.filter({($0.restrictions?.localizedCaseInsensitiveContains(text!))!})
+//            shelterListTableView.reloadData()
+//        }
+//    }
+    
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
@@ -56,6 +147,7 @@ class shelterListViewController: UIViewController, UITableViewDelegate, UITableV
             shelterListTableView.reloadData()
         }
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +195,7 @@ class shelterListViewController: UIViewController, UITableViewDelegate, UITableV
                 s.restrictions = restrictions as? String
                 s.roomtype = roomType as? String
                 s.special = special as? String
-                
+                s.shelterCount = String(self.shelterList.count)
                 self.shelterList.append(s)
                 print(self.shelterList.count)
                 if (self.shelterList.count == 14) {

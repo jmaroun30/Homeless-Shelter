@@ -16,6 +16,9 @@ class UserViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var findShelterButton: UIButton!
+    @IBOutlet weak var reservationTextView: UITextView!
+    
+    var reserved: Bool?
     
     var locationManager = CLLocationManager()
     
@@ -68,6 +71,20 @@ class UserViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func findShelterTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "shelterListSegue", sender: nil)
+        performSegue(withIdentifier: "shelterListSegue", sender: nil)
     }
+    
+    var reservedNumber: String?
+    var reservedName: String?
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

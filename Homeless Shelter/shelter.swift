@@ -18,4 +18,6 @@ class shelter: NSObject {
     var restrictions: String?
     var roomtype: String?
     var special: String?
+    
+    var shelterCount: String?
 }
