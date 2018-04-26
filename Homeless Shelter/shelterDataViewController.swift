@@ -55,6 +55,8 @@ class shelterDataViewController: UIViewController, UITextViewDelegate, UIAlertVi
         if numberInput.text == nil || numberInput.text == "" || Int(numberInput.text!)! > Int(capacity!) {
             self.displayAlert(title: "Error", message: "You must input a valid reservation value.")
         } else {
+            ref?.child("user").child((FIRAuth.auth()?.currentUser?.uid)!).child("occupiedBeds").setValue(Int(numberInput.text!))
+            ref?.child("user").child((FIRAuth.auth()?.currentUser?.uid)!).child("currentShelter").setValue(name)
             ref?.child("shelter").child(self.shelterCount!).child("capacity").setValue(Int(capacity! - Double(numberInput.text!)!))
         }
 
@@ -66,8 +68,10 @@ class shelterDataViewController: UIViewController, UITextViewDelegate, UIAlertVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reservedSegue" {
             let reservedViewController = segue.destination as! UserViewController
-            reservedViewController.reservedNumber = numberInput.text
+            reservedViewController.reservedNumber = Int(numberInput.text!)
             reservedViewController.reservedName = name
+            reservedViewController.currentBeds = Int(capacity!) - Int(numberInput.text!)!
+            reservedViewController.releaseNumber = shelterCount
         }
     }
     

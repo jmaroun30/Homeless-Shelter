@@ -18,6 +18,7 @@
 		B779FAAB208E52C8009741DD /* shelterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779FAAA208E52C8009741DD /* shelterListViewController.swift */; };
 		B779FAAD208E5D30009741DD /* shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779FAAC208E5D30009741DD /* shelter.swift */; };
 		B779FAB120901E60009741DD /* shelterDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779FAB020901E60009741DD /* shelterDataViewController.swift */; };
+		B779FAB320910442009741DD /* pinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779FAB220910442009741DD /* pinAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B779FAAA208E52C8009741DD /* shelterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shelterListViewController.swift; sourceTree = "<group>"; };
 		B779FAAC208E5D30009741DD /* shelter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shelter.swift; sourceTree = "<group>"; };
 		B779FAB020901E60009741DD /* shelterDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shelterDataViewController.swift; sourceTree = "<group>"; };
+		B779FAB220910442009741DD /* pinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinAnnotation.swift; sourceTree = "<group>"; };
 		DEF6D6F7209E2DC1193EBB81 /* Pods-Homeless Shelter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homeless Shelter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homeless Shelter/Pods-Homeless Shelter.release.xcconfig"; sourceTree = "<group>"; };
 		FF5DBA717F23E888A639C738 /* Pods-Homeless Shelter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homeless Shelter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homeless Shelter/Pods-Homeless Shelter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				B777BDFC2087B63A0012A943 /* AppDelegate.swift */,
 				B777BDFE2087B63A0012A943 /* ViewController.swift */,
 				B7453F7B20883F370060B59F /* UserViewController.swift */,
+				B779FAB220910442009741DD /* pinAnnotation.swift */,
 				B777BE002087B63A0012A943 /* Main.storyboard */,
 				B779FAAA208E52C8009741DD /* shelterListViewController.swift */,
 				B779FAB020901E60009741DD /* shelterDataViewController.swift */,
@@ -224,6 +227,7 @@
 				B7453F7C20883F370060B59F /* UserViewController.swift in Sources */,
 				B779FAAD208E5D30009741DD /* shelter.swift in Sources */,
 				B777BDFD2087B63A0012A943 /* AppDelegate.swift in Sources */,
+				B779FAB320910442009741DD /* pinAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
